@@ -79,5 +79,10 @@ namespace Kursovaya
                 LoadData();
             }
         }
+
+        private void about_btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Разработал Кириллов Евгений Алексеевич студент группы 404 - ИС");
+        }
     }
 }

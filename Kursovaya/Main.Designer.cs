@@ -33,6 +33,7 @@
             Btn_Edit = new Button();
             Btn_Delete = new Button();
             openFileDialog1 = new OpenFileDialog();
+            about_btn = new Button();
             ((System.ComponentModel.ISupportInitialize)datagridview).BeginInit();
             SuspendLayout();
             // 
@@ -86,11 +87,23 @@
             // 
             openFileDialog1.FileName = "openFileDialog1";
             // 
+            // about_btn
+            // 
+            about_btn.AutoSize = true;
+            about_btn.Location = new Point(12, 674);
+            about_btn.Name = "about_btn";
+            about_btn.Size = new Size(152, 36);
+            about_btn.TabIndex = 4;
+            about_btn.Text = "О программе";
+            about_btn.UseVisualStyleBackColor = true;
+            about_btn.Click += about_btn_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(13F, 26F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1006, 721);
+            Controls.Add(about_btn);
             Controls.Add(Btn_Delete);
             Controls.Add(Btn_Edit);
             Controls.Add(Btn_Add);
@@ -103,6 +116,7 @@
             Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)datagridview).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -112,5 +126,6 @@
         private Button Btn_Edit;
         private Button Btn_Delete;
         private OpenFileDialog openFileDialog1;
+        private Button about_btn;
     }
 }
