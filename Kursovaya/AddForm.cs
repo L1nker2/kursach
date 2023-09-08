@@ -26,9 +26,9 @@ namespace Kursovaya
                 MessageBox.Show("Пустое поле!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(Convert.ToInt32(RoomNumber) < 100 || Convert.ToInt32(RoomNumber) > 300)
+            if(Convert.ToInt32(RoomNumber) < 100 || Convert.ToInt32(RoomNumber) >= 400)
             {
-                MessageBox.Show("Номер комнаты должен быть больше 100 и меньше 300!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Номер комнаты должен быть больше 100 и меньше 400!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try

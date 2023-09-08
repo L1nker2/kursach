@@ -84,5 +84,80 @@ namespace Kursovaya
         {
             MessageBox.Show("Разработал Кириллов Евгений Алексеевич студент группы 404 - ИС");
         }
+
+        private void floor_one_btn_Click(object sender, EventArgs e)
+        {
+            using (var context = new StudentDbContext())
+            {
+                var students = context.Students.ToList();
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("Номер студента", typeof(int));
+                dataTable.Columns.Add("Имя студента", typeof(string));
+                dataTable.Columns.Add("Фамилия студента", typeof(string));
+                dataTable.Columns.Add("Номер комнаты", typeof(string));
+                foreach (var student in students)
+                {
+                    if(Convert.ToInt32(student.RoomNumber) >= 100 && Convert.ToInt32(student.RoomNumber) < 200)
+                    {
+                        dataTable.Rows.Add(student.Id, student.FirstName, student.SecondName, student.RoomNumber);
+                    }
+                }
+                datagridview.DataSource = dataTable;
+                datagridview.ReadOnly = true;
+                datagridview.AllowUserToAddRows = false;
+                datagridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                datagridview.RowHeadersVisible = false;
+            }
+        }
+
+        private void floor_two_btn_Click(object sender, EventArgs e)
+        {
+            using (var context = new StudentDbContext())
+            {
+                var students = context.Students.ToList();
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("Номер студента", typeof(int));
+                dataTable.Columns.Add("Имя студента", typeof(string));
+                dataTable.Columns.Add("Фамилия студента", typeof(string));
+                dataTable.Columns.Add("Номер комнаты", typeof(string));
+                foreach (var student in students)
+                {
+                    if (Convert.ToInt32(student.RoomNumber) >= 200 && Convert.ToInt32(student.RoomNumber) < 300)
+                    {
+                        dataTable.Rows.Add(student.Id, student.FirstName, student.SecondName, student.RoomNumber);
+                    }
+                }
+                datagridview.DataSource = dataTable;
+                datagridview.ReadOnly = true;
+                datagridview.AllowUserToAddRows = false;
+                datagridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                datagridview.RowHeadersVisible = false;
+            }
+        }
+
+        private void floor_three_btn_Click(object sender, EventArgs e)
+        {
+            using (var context = new StudentDbContext())
+            {
+                var students = context.Students.ToList();
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("Номер студента", typeof(int));
+                dataTable.Columns.Add("Имя студента", typeof(string));
+                dataTable.Columns.Add("Фамилия студента", typeof(string));
+                dataTable.Columns.Add("Номер комнаты", typeof(string));
+                foreach (var student in students)
+                {
+                    if (Convert.ToInt32(student.RoomNumber) >= 300)
+                    {
+                        dataTable.Rows.Add(student.Id, student.FirstName, student.SecondName, student.RoomNumber);
+                    }
+                }
+                datagridview.DataSource = dataTable;
+                datagridview.ReadOnly = true;
+                datagridview.AllowUserToAddRows = false;
+                datagridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                datagridview.RowHeadersVisible = false;
+            }
+        }
     }
 }
