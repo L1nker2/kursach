@@ -97,7 +97,7 @@ namespace Kursovaya
                 dataTable.Columns.Add("Номер комнаты", typeof(string));
                 foreach (var student in students)
                 {
-                    if(Convert.ToInt32(student.RoomNumber) >= 100 && Convert.ToInt32(student.RoomNumber) < 200)
+                    if (Convert.ToInt32(student.RoomNumber) >= 100 && Convert.ToInt32(student.RoomNumber) < 200)
                     {
                         dataTable.Rows.Add(student.Id, student.FirstName, student.SecondName, student.RoomNumber);
                     }

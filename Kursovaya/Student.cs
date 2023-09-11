@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
-
 namespace Kursovaya
 {
     public class Student

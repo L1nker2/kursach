@@ -148,7 +148,7 @@
             Margin = new Padding(5, 4, 5, 4);
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Kursovaya";
+            Text = "Учет студентов в общежитии";
             Load += Main_Load;
             ((System.ComponentModel.ISupportInitialize)datagridview).EndInit();
             ResumeLayout(false);

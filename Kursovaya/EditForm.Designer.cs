@@ -116,7 +116,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "EditForm";
-            Text = "EditForm";
+            Text = "Изменить";
             ResumeLayout(false);
             PerformLayout();
         }
